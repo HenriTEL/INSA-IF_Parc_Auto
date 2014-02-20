@@ -1,27 +1,30 @@
-C = g++ -O2 -I./sdl/include -L.
-CCFLAG = -Wall -fexceptions -c -std=gnu++11
-LIBS = -lm -lSDL -lpthread -ldl
-MAIN = main.cpp
-CLASSH = Graph.h ServerStats.h Log.h MapExt.h StringExt.h
-CLASS = $(INT:.h=.cpp)
-OBJ = $(CLASSH:.h=.o)
+EXE = parking
+CC = g++
+EDL = g++
+EDL_FLAG = -o $(EXE)
+CC_FLAG = -Wall -fexceptions -c -std=gnu++11
+CC_LIB_PATH = -L./libs
+CC_LIB = -ltp
+MAIN = Parking
+INT = Simulation.h
+REA = $(INT:.h=.cpp)
+OBJ = $(INT:.h=.o)
 ClEAN = efface
 
 
 PHONY : $(CLEAN)
 
-all: main
+all : $(EXE)
 
-main: $(OBJ) main.o
-	$(CC) -o analog $(OBJ) main.o $(LIBS)
+$(EXE) : $(OBJ) $(MAIN).o
+	$(EDL) $(EDL_FLAG) $(OBJ) $(MAIN).o $(LIBS)
 
-main.o: $(MAIN) $(CLASSH)
-	$(CC) -o $@ -c $(CCFLAG) $(MAIN)
+$(MAIN).o : $(MAIN) $(REA)
+	$(CC) -o $@ $(CC_FLAG) $(MAIN)
 
 %.o : %.cpp
 	echo compilation de $<
-	$(CC) -o $@ -c $(CCFLAG) $<
-
+	$(CC) $@ $(CC_FLAG) $<
 
 $(CLEAN) :
-	rm -f $(OBJ) main.o core
+	rm -f $(OBJ) $(MAIN).o core
