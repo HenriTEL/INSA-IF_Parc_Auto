@@ -40,7 +40,7 @@ int main(void)
 //
 {
 	InitialiserApplication( XTERM );
-	sleep(10);
+	sleep(5);
 	TerminerApplication();
 	return 0;
 } //----- fin du main
