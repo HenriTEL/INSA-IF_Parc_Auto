@@ -14,7 +14,9 @@
 //------------------------------------------------------ Include personnel
 #include "Parking.h"
 #include <Outils.h>
-#include <unistd.h> //sleep()
+#include <Heure.h>
+#include <unistd.h> //sleep()z
+#include <signal.h>
 ///////////////////////////////////////////////////////////////////  PRIVE
 //------------------------------------------------------------- Constantes
 
@@ -39,8 +41,12 @@ int main(void)
 // Algorithme :
 //
 {
+	pid_t h_ret;
+
 	InitialiserApplication( XTERM );
+	h_ret = ActiverHeure();
 	sleep(5);
+	kill( h_ret, SIGUSR2 );
 	TerminerApplication();
 	return 0;
 } //----- fin du main
