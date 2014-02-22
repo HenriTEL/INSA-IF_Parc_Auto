@@ -1,18 +1,18 @@
 /*************************************************************************
-                           XXX  -  description
+                           Parking  -  description
                              -------------------
-    début                : XXX
-    copyright            : (C) XXX par XXX
-    e-mail               : XXX
+    début                : 20 février 2014
+    copyright            : (C) 2014 par Henri HANNETEL
+    e-mail               : henri.hannetel@insa-lyon.fr
 *************************************************************************/
 
-//---------- Réalisation de la tâche <XXX> (fichier XXX.cpp) ---
+//---------- Réalisation de la tâche <Parking> (fichier Parking.cpp) ---
 
 /////////////////////////////////////////////////////////////////  INCLUDE
 //-------------------------------------------------------- Include système
 
 //------------------------------------------------------ Include personnel
-#include "XXX.h"
+#include "Parking.h"
 
 ///////////////////////////////////////////////////////////////////  PRIVE
 //------------------------------------------------------------- Constantes
@@ -34,9 +34,10 @@
 
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
-type Nom ( liste de paramètres )
+int main(void)
 // Algorithme :
 //
 {
-} //----- fin de Nom
+	return 0;
+} //----- fin du main
 

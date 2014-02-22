@@ -1,17 +1,17 @@
 /*************************************************************************
-                           XXX  -  description
+                           Simulation  -  description
                              -------------------
-    début                : XXX
-    copyright            : (C) XXX par XXX
-    e-mail               : XXX
+    début                : 20 février 2014
+    copyright            : (C) 2014 par Henri HANNETEL
+    e-mail               : henri.hannetel@insa-lyon.fr
 *************************************************************************/
 
-//---------- Interface de la tâche <XXX> (fichier XXX.h) -------
-#if ! defined ( XXX_H )
-#define XXX_H
+//---------- Interface de la tâche <Simulation> (fichier Simulation.h) -------
+#if ! defined ( Simulation_H )
+#define Simulation_H
 
 //------------------------------------------------------------------------
-// Rôle de la tâche <XXX>
+// Rôle de la tâche <Simulation>
 //
 //
 //------------------------------------------------------------------------
@@ -31,5 +31,5 @@
 // Contrat :
 //
 
-#endif // XXX_H
+#endif // Simulation_H
 

@@ -1,17 +1,17 @@
 /*************************************************************************
-                           XXX  -  description
+                           Parking  -  description
                              -------------------
-    début                : XXX
-    copyright            : (C) XXX par XXX
-    e-mail               : XXX
+    début                : 20 février 2014
+    copyright            : (C) 2014 par Henri HANNETEL
+    e-mail               : henri.hannetel@insa-lyon.fr
 *************************************************************************/
 
-//---------- Interface de la tâche <XXX> (fichier XXX.h) -------
-#if ! defined ( XXX_H )
-#define XXX_H
+//---------- Interface de la tâche <Parking> (fichier Parking.h) -------
+#if ! defined ( Parking_H )
+#define Parking_H
 
 //------------------------------------------------------------------------
-// Rôle de la tâche <XXX>
+// Rôle de la tâche <Parking>
 //
 //
 //------------------------------------------------------------------------
@@ -31,5 +31,5 @@
 // Contrat :
 //
 
-#endif // XXX_H
+#endif // Parking_H
 

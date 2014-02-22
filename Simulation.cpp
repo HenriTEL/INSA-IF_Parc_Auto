@@ -1,18 +1,18 @@
 /*************************************************************************
-                           XXX  -  description
+                           Simulation  -  description
                              -------------------
-    début                : XXX
-    copyright            : (C) XXX par XXX
-    e-mail               : XXX
+    début                : 20 février 2014
+    copyright            : (C) 2014 par Henri HANNETEL
+    e-mail               : henri.hannetel@insa-lyon.fr
 *************************************************************************/
 
-//---------- Réalisation de la tâche <XXX> (fichier XXX.cpp) ---
+//---------- Réalisation de la tâche <Simulation> (fichier Simulation.cpp) ---
 
 /////////////////////////////////////////////////////////////////  INCLUDE
 //-------------------------------------------------------- Include système
 
 //------------------------------------------------------ Include personnel
-#include "XXX.h"
+#include "Simulation.h"
 
 ///////////////////////////////////////////////////////////////////  PRIVE
 //------------------------------------------------------------- Constantes
@@ -34,9 +34,9 @@
 
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
-type Nom ( liste de paramètres )
+//type Nom ( liste de paramètres )
 // Algorithme :
 //
-{
-} //----- fin de Nom
+//{
+//} //----- fin de Nom
 
