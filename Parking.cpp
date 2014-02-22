@@ -13,7 +13,8 @@
 
 //------------------------------------------------------ Include personnel
 #include "Parking.h"
-
+#include <Outils.h>
+#include <unistd.h> //sleep()
 ///////////////////////////////////////////////////////////////////  PRIVE
 //------------------------------------------------------------- Constantes
 
@@ -38,6 +39,9 @@ int main(void)
 // Algorithme :
 //
 {
+	InitialiserApplication( XTERM );
+	sleep(10);
+	TerminerApplication();
 	return 0;
 } //----- fin du main
 

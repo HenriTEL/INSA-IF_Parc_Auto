@@ -1,10 +1,11 @@
 EXE = parking
 CC = g++
 EDL = g++
-EDL_FLAG = -I/libs -o $(EXE)
-CC_FLAG = -Wall -fexceptions -c -o
-CC_LIB_PATH = -L./libs
-CC_LIB = -ltp
+INC_PATH = -I./modele -I./outils
+LIB_PATH = -L./libs
+LIBS = -ltp -ltcl8.5 -lncurses
+EDL_FLAG = $(LIB_PATH) -o $(EXE)
+CC_FLAG = $(INC_PATH) -Wall -fexceptions -c -o
 MAIN = Parking
 INT = Simulation.h
 REA = $(INT:.h=.cpp)
@@ -17,6 +18,7 @@ all : $(EXE)
 
 $(EXE) : $(OBJ) $(MAIN).o
 	$(EDL) $(EDL_FLAG) $(OBJ) $(MAIN).o $(LIBS)
+
 
 $(MAIN).o : $(MAIN).cpp $(REA)
 	$(CC) $(CC_FLAG) $@ $<
