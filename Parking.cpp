@@ -15,8 +15,9 @@
 #include "Parking.h"
 #include <Outils.h>
 #include <Heure.h>
-#include <unistd.h> //sleep()z
-#include <signal.h>
+#include <sys/ipc.h>
+#include <unistd.h> // sleep()
+#include <signal.h> // kill()
 ///////////////////////////////////////////////////////////////////  PRIVE
 //------------------------------------------------------------- Constantes
 
@@ -45,9 +46,11 @@ int main(void)
 
 	InitialiserApplication( XTERM );
 	h_ret = ActiverHeure();
+
 	sleep(5);
-	kill( h_ret, SIGUSR2 );
+
+	kill( h_ret, SIGUSR2 ); // Arrêt de l'heure
 	TerminerApplication();
+
 	return 0;
 } //----- fin du main
-

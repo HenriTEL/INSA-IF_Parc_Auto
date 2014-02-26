@@ -18,7 +18,7 @@ Prerequisite
 The **tcl** and **ncurses** libraries.
 > If you encounter Undefined references problems, you probably need to install it.
 > ```sh
-> sudo apt-get install ncurses tcl
+> sudo apt-get install ncurses-dev tcl-dev
 > ```
 
 Installation
