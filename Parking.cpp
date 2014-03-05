@@ -50,13 +50,11 @@ int main()
 // Algorithme :
 //
 {
-	struct sigaction sig_ac;
 	pid_t h_ret; // Identifiant de la tâche Heure
 	key_t shm_key, sem_key;
 	int shm_flag, sem_flag;
 	int shm_id, sem_id;
 	int shm_size = NB_PLACES * 12 + 4 + NB_REQ * 12;
-	short  sem_set[NB_SEM];
 
 	// Masquage des signaux
 	sigprocmask( SIG_SETMASK, SIG_SET, NULL);
@@ -78,8 +76,8 @@ int main()
 		cerr << "ERR: Impossible de créer le sémaphore." << endl;
 		return 1;
 	}
-	sem_set[0] = 0; // accès libre aux places de parking
-	sem_set[1] = 0; // accès libre aux requêtes en attente
+//	sem_set[0] = 0; // accès libre aux places de parking
+//	sem_set[1] = 0; // accès libre aux requêtes en attente
 
 	InitialiserApplication( XTERM );
 
