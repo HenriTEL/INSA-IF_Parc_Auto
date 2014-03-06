@@ -13,13 +13,14 @@
 
 //------------------------------------------------------ Include personnel
 #include "Parking.h"
+#include "Sortie.h"
 #include <Outils.h>
 #include <Heure.h>
 #include <iostream>
 #include <sys/ipc.h>
 #include <sys/shm.h> // shmget()
 #include <sys/sem.h> // semget()
-#include <unistd.h> // sleep()
+#include <unistd.h> // sleep(), pause()
 #include <signal.h> // kill()
 
 ///////////////////////////////////////////////////////////////////  PRIVE
@@ -50,7 +51,7 @@ int main()
 // Algorithme :
 //
 {
-	pid_t h_ret; // Identifiant de la tâche Heure
+	pid_t h_ret, sv_ret; // Id des tâches
 	key_t shm_key, sem_key;
 	int shm_flag, sem_flag;
 	int shm_id, sem_id;
@@ -83,15 +84,18 @@ int main()
 
 	// Lancement des tâches
 	h_ret = ActiverHeure();
-
+	sv_ret = VoiturierSortie();
 	// Attente d'un signal
 	sigprocmask( SIG_UNBLOCK, SIG_SET, NULL);	
 	//pause();
 	sleep(5);
 
-	kill( h_ret, SIGUSR2 ); // Arrêt de l'heure
+	kill( h_ret, SIGUSR2 ); // Arrêt de la tâche heure
+	sleep(2);
+	kill( sv_ret, SIGUSR2 ); // Arrêt de la tâche Sortie
+	sleep(2);
 	shmctl( shm_id, IPC_RMID, NULL ); // Destruction du segment de mp
 	TerminerApplication();
 
-	return 0;
+	return EXIT_SUCCESS;
 } //----- fin du main

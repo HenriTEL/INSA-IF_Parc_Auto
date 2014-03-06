@@ -7,7 +7,7 @@ LIBS = -ltp -lncurses -ltcl
 EDL_FLAG = $(LIB_PATH) -o $(EXE)
 CC_FLAG = $(INC_PATH) -Wall -fexceptions -c -o
 MAIN = Parking
-INT = 
+INT = Sortie.h
 REA = $(INT:.h=.cpp)
 OBJ = $(INT:.h=.o)
 RM = rm
